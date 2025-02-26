@@ -183,7 +183,7 @@
 
             try {
                 // 发送请求到后端
-                const response = await fetch('http://localhost:3001/chat', {
+                const response = await fetch(`${window.location.origin}/chat`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
