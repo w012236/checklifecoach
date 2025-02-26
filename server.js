@@ -7,7 +7,9 @@ const app = express();
 const port = 3001;
 
 // DeepSeek R1 API 配置
-const API_KEY = 'a0d3d083-39a5-45e4-8501-88ce33b1d201';
+require('dotenv').config();
+
+const API_KEY = process.env.DEEPSEEK_API_KEY;
 const API_URL = 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
 const API_TIMEOUT = 60000; // 60秒超时
 
